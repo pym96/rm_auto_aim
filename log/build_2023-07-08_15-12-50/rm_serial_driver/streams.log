@@ -1,0 +1,93 @@
+[0.014s] Invoking command in '/home/dan/MA/CJ/build/rm_serial_driver': AMENT_PREFIX_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/dan/MA/CJ/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/dan/MA/CJ/src/rm_serial_driver -DCMAKE_INSTALL_PREFIX=/home/dan/MA/CJ/install/rm_serial_driver
+[0.102s] -- The C compiler identification is GNU 11.3.0
+[0.153s] -- The CXX compiler identification is GNU 11.3.0
+[0.161s] -- Detecting C compiler ABI info
+[0.254s] -- Detecting C compiler ABI info - done
+[0.261s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.261s] -- Detecting C compile features
+[0.261s] -- Detecting C compile features - done
+[0.269s] -- Detecting CXX compiler ABI info
+[0.356s] -- Detecting CXX compiler ABI info - done
+[0.368s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.368s] -- Detecting CXX compile features
+[0.368s] -- Detecting CXX compile features - done
+[0.368s] -- Found ament_cmake_auto: 1.3.5 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[0.545s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.6") found components: Interpreter 
+[0.753s] -- Found rosidl_generator_c: 3.1.4 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.756s] -- Found rosidl_adapter: 3.1.4 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.765s] -- Found rosidl_generator_cpp: 3.1.4 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.781s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.801s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.861s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.863s] -- Found rmw_fastrtps_cpp: 6.2.2 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.986s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.009s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.050s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.058s] -- Looking for pthread.h
+[1.159s] -- Looking for pthread.h - found
+[1.160s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.263s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.264s] -- Found Threads: TRUE  
+[1.934s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[1.935s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.935s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[2.278s] -- Found ament_lint_auto: 0.12.6 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.318s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.319s] -- Configured cppcheck include dirs: /home/dan/MA/CJ/src/rm_serial_driver/include
+[2.319s] -- Configured cppcheck exclude dirs and/or files: 
+[2.321s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[2.322s] -- Configured cpplint exclude dirs and/or files: 
+[2.323s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.324s] -- Added test 'lint_cmake' to check CMake code style
+[2.326s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[2.328s] -- Added test 'xmllint' to check XML markup files
+[2.332s] -- Configuring done
+[2.383s] -- Generating done
+[2.383s] -- Build files have been written to: /home/dan/MA/CJ/build/rm_serial_driver
+[2.421s] Invoked command in '/home/dan/MA/CJ/build/rm_serial_driver' returned '0': AMENT_PREFIX_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/dan/MA/CJ/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/dan/MA/CJ/src/rm_serial_driver -DCMAKE_INSTALL_PREFIX=/home/dan/MA/CJ/install/rm_serial_driver
+[2.424s] Invoking command in '/home/dan/MA/CJ/build/rm_serial_driver': AMENT_PREFIX_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/dan/MA/CJ/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/dan/MA/CJ/build/rm_serial_driver -- -j16 -l16
+[2.528s] [ 20%] [32mBuilding CXX object CMakeFiles/rm_serial_driver.dir/src/crc.cpp.o[0m
+[2.532s] [ 40%] [32mBuilding CXX object CMakeFiles/rm_serial_driver.dir/src/rm_serial_driver.cpp.o[0m
+[2.536s] [ 60%] [32mBuilding CXX object CMakeFiles/rm_serial_driver_node.dir/rclcpp_components/node_main_rm_serial_driver_node.cpp.o[0m
+[9.083s] [ 80%] [32m[1mLinking CXX executable rm_serial_driver_node[0m
+[9.304s] [ 80%] Built target rm_serial_driver_node
+[19.288s] [100%] [32m[1mLinking CXX shared library librm_serial_driver.so[0m
+[20.579s] [100%] Built target rm_serial_driver
+[20.594s] Invoked command in '/home/dan/MA/CJ/build/rm_serial_driver' returned '0': AMENT_PREFIX_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/dan/MA/CJ/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/dan/MA/CJ/build/rm_serial_driver -- -j16 -l16
+[20.633s] Invoking command in '/home/dan/MA/CJ/build/rm_serial_driver': AMENT_PREFIX_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/dan/MA/CJ/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/dan/MA/CJ/build/rm_serial_driver
+[20.640s] -- Install configuration: ""
+[20.640s] -- Installing: /home/dan/MA/CJ/install/rm_serial_driver/lib/rm_serial_driver/rm_serial_driver_node
+[20.641s] -- Set runtime path of "/home/dan/MA/CJ/install/rm_serial_driver/lib/rm_serial_driver/rm_serial_driver_node" to ""
+[20.641s] -- Installing: /home/dan/MA/CJ/install/rm_serial_driver/include
+[20.641s] -- Installing: /home/dan/MA/CJ/install/rm_serial_driver/include/rm_serial_driver
+[20.641s] -- Installing: /home/dan/MA/CJ/install/rm_serial_driver/include/rm_serial_driver/crc.hpp
+[20.641s] -- Installing: /home/dan/MA/CJ/install/rm_serial_driver/include/rm_serial_driver/rm_serial_driver.hpp
+[20.642s] -- Installing: /home/dan/MA/CJ/install/rm_serial_driver/include/rm_serial_driver/packet.hpp
+[20.642s] -- Installing: /home/dan/MA/CJ/install/rm_serial_driver/share/rm_serial_driver/environment/library_path.sh
+[20.642s] -- Installing: /home/dan/MA/CJ/install/rm_serial_driver/share/rm_serial_driver/environment/library_path.dsv
+[20.642s] -- Installing: /home/dan/MA/CJ/install/rm_serial_driver/lib/librm_serial_driver.so
+[20.651s] -- Set runtime path of "/home/dan/MA/CJ/install/rm_serial_driver/lib/librm_serial_driver.so" to ""
+[20.651s] -- Installing: /home/dan/MA/CJ/install/rm_serial_driver/share/rm_serial_driver/config
+[20.651s] -- Installing: /home/dan/MA/CJ/install/rm_serial_driver/share/rm_serial_driver/config/serial_driver.yaml
+[20.651s] -- Installing: /home/dan/MA/CJ/install/rm_serial_driver/share/rm_serial_driver/launch
+[20.651s] -- Installing: /home/dan/MA/CJ/install/rm_serial_driver/share/rm_serial_driver/launch/serial_driver.launch.py
+[20.652s] -- Installing: /home/dan/MA/CJ/install/rm_serial_driver/share/ament_index/resource_index/package_run_dependencies/rm_serial_driver
+[20.652s] -- Installing: /home/dan/MA/CJ/install/rm_serial_driver/share/ament_index/resource_index/parent_prefix_path/rm_serial_driver
+[20.652s] -- Installing: /home/dan/MA/CJ/install/rm_serial_driver/share/rm_serial_driver/environment/ament_prefix_path.sh
+[20.652s] -- Installing: /home/dan/MA/CJ/install/rm_serial_driver/share/rm_serial_driver/environment/ament_prefix_path.dsv
+[20.652s] -- Installing: /home/dan/MA/CJ/install/rm_serial_driver/share/rm_serial_driver/environment/path.sh
+[20.653s] -- Installing: /home/dan/MA/CJ/install/rm_serial_driver/share/rm_serial_driver/environment/path.dsv
+[20.653s] -- Installing: /home/dan/MA/CJ/install/rm_serial_driver/share/rm_serial_driver/local_setup.bash
+[20.653s] -- Installing: /home/dan/MA/CJ/install/rm_serial_driver/share/rm_serial_driver/local_setup.sh
+[20.653s] -- Installing: /home/dan/MA/CJ/install/rm_serial_driver/share/rm_serial_driver/local_setup.zsh
+[20.653s] -- Installing: /home/dan/MA/CJ/install/rm_serial_driver/share/rm_serial_driver/local_setup.dsv
+[20.653s] -- Installing: /home/dan/MA/CJ/install/rm_serial_driver/share/rm_serial_driver/package.dsv
+[20.654s] -- Installing: /home/dan/MA/CJ/install/rm_serial_driver/share/ament_index/resource_index/packages/rm_serial_driver
+[20.654s] -- Installing: /home/dan/MA/CJ/install/rm_serial_driver/share/ament_index/resource_index/rclcpp_components/rm_serial_driver
+[20.654s] -- Installing: /home/dan/MA/CJ/install/rm_serial_driver/share/rm_serial_driver/cmake/ament_cmake_export_dependencies-extras.cmake
+[20.654s] -- Installing: /home/dan/MA/CJ/install/rm_serial_driver/share/rm_serial_driver/cmake/ament_cmake_export_include_directories-extras.cmake
+[20.654s] -- Installing: /home/dan/MA/CJ/install/rm_serial_driver/share/rm_serial_driver/cmake/ament_cmake_export_libraries-extras.cmake
+[20.654s] -- Installing: /home/dan/MA/CJ/install/rm_serial_driver/share/rm_serial_driver/cmake/rm_serial_driverConfig.cmake
+[20.655s] -- Installing: /home/dan/MA/CJ/install/rm_serial_driver/share/rm_serial_driver/cmake/rm_serial_driverConfig-version.cmake
+[20.655s] -- Installing: /home/dan/MA/CJ/install/rm_serial_driver/share/rm_serial_driver/package.xml
+[20.657s] Invoked command in '/home/dan/MA/CJ/build/rm_serial_driver' returned '0': AMENT_PREFIX_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/dan/MA/CJ/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/dan/MA/CJ/build/rm_serial_driver

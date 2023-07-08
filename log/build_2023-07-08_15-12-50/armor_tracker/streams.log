@@ -1,0 +1,86 @@
+[0.017s] Invoking command in '/home/dan/MA/CJ/build/armor_tracker': AMENT_PREFIX_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/dan/MA/CJ/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/dan/MA/CJ/src/rm_auto_aim/armor_tracker -DCMAKE_INSTALL_PREFIX=/home/dan/MA/CJ/install/armor_tracker
+[0.109s] -- The C compiler identification is GNU 11.3.0
+[0.161s] -- The CXX compiler identification is GNU 11.3.0
+[0.167s] -- Detecting C compiler ABI info
+[0.261s] -- Detecting C compiler ABI info - done
+[0.268s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.268s] -- Detecting C compile features
+[0.269s] -- Detecting C compile features - done
+[0.272s] -- Detecting CXX compiler ABI info
+[0.357s] -- Detecting CXX compiler ABI info - done
+[0.364s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.364s] -- Detecting CXX compile features
+[0.364s] -- Detecting CXX compile features - done
+[0.366s] -- Found ament_cmake_auto: 1.3.5 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[0.552s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.6") found components: Interpreter 
+[0.766s] -- Found rosidl_generator_c: 3.1.4 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.769s] -- Found rosidl_adapter: 3.1.4 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.777s] -- Found rosidl_generator_cpp: 3.1.4 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.791s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.811s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.871s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.873s] -- Found rmw_fastrtps_cpp: 6.2.2 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.996s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.018s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.059s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.066s] -- Looking for pthread.h
+[1.167s] -- Looking for pthread.h - found
+[1.167s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.267s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.269s] -- Found Threads: TRUE  
+[1.806s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[1.808s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.808s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[2.141s] -- Found ament_lint_auto: 0.12.6 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.163s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.163s] -- Configured cppcheck include dirs: /home/dan/MA/CJ/src/rm_auto_aim/armor_tracker/include
+[2.163s] -- Configured cppcheck exclude dirs and/or files: 
+[2.164s] -- Added test 'lint_cmake' to check CMake code style
+[2.165s] -- Added test 'xmllint' to check XML markup files
+[2.167s] -- Configuring done
+[2.189s] -- Generating done
+[2.192s] -- Build files have been written to: /home/dan/MA/CJ/build/armor_tracker
+[2.217s] Invoked command in '/home/dan/MA/CJ/build/armor_tracker' returned '0': AMENT_PREFIX_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/dan/MA/CJ/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/dan/MA/CJ/src/rm_auto_aim/armor_tracker -DCMAKE_INSTALL_PREFIX=/home/dan/MA/CJ/install/armor_tracker
+[2.219s] Invoking command in '/home/dan/MA/CJ/build/armor_tracker': AMENT_PREFIX_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/dan/MA/CJ/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/dan/MA/CJ/build/armor_tracker -- -j16 -l16
+[2.263s] [ 66%] [32mBuilding CXX object CMakeFiles/armor_tracker.dir/src/tracker.cpp.o[0m
+[2.263s] [ 66%] [32mBuilding CXX object CMakeFiles/armor_tracker.dir/src/extended_kalman_filter.cpp.o[0m
+[2.263s] [ 66%] [32mBuilding CXX object CMakeFiles/armor_tracker.dir/src/tracker_node.cpp.o[0m
+[2.263s] [ 66%] [32mBuilding CXX object CMakeFiles/armor_tracker_node.dir/rclcpp_components/node_main_armor_tracker_node.cpp.o[0m
+[8.815s] [ 83%] [32m[1mLinking CXX executable armor_tracker_node[0m
+[9.145s] [ 83%] Built target armor_tracker_node
+[20.310s] [100%] [32m[1mLinking CXX shared library libarmor_tracker.so[0m
+[21.777s] [100%] Built target armor_tracker
+[21.788s] Invoked command in '/home/dan/MA/CJ/build/armor_tracker' returned '0': AMENT_PREFIX_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/dan/MA/CJ/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/dan/MA/CJ/build/armor_tracker -- -j16 -l16
+[21.819s] Invoking command in '/home/dan/MA/CJ/build/armor_tracker': AMENT_PREFIX_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/dan/MA/CJ/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/dan/MA/CJ/build/armor_tracker
+[21.826s] -- Install configuration: ""
+[21.826s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/lib/armor_tracker/armor_tracker_node
+[21.827s] -- Set runtime path of "/home/dan/MA/CJ/install/armor_tracker/lib/armor_tracker/armor_tracker_node" to ""
+[21.827s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/include
+[21.827s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/include/armor_tracker
+[21.827s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/include/armor_tracker/tracker_node.hpp
+[21.827s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/include/armor_tracker/tracker.hpp
+[21.827s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/include/armor_tracker/extended_kalman_filter.hpp
+[21.827s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/armor_tracker/environment/library_path.sh
+[21.827s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/armor_tracker/environment/library_path.dsv
+[21.827s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/lib/libarmor_tracker.so
+[21.839s] -- Set runtime path of "/home/dan/MA/CJ/install/armor_tracker/lib/libarmor_tracker.so" to ""
+[21.839s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/ament_index/resource_index/package_run_dependencies/armor_tracker
+[21.840s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/ament_index/resource_index/parent_prefix_path/armor_tracker
+[21.840s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/armor_tracker/environment/ament_prefix_path.sh
+[21.840s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/armor_tracker/environment/ament_prefix_path.dsv
+[21.840s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/armor_tracker/environment/path.sh
+[21.840s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/armor_tracker/environment/path.dsv
+[21.840s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/armor_tracker/local_setup.bash
+[21.840s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/armor_tracker/local_setup.sh
+[21.841s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/armor_tracker/local_setup.zsh
+[21.841s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/armor_tracker/local_setup.dsv
+[21.841s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/armor_tracker/package.dsv
+[21.841s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/ament_index/resource_index/packages/armor_tracker
+[21.841s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/ament_index/resource_index/rclcpp_components/armor_tracker
+[21.841s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/armor_tracker/cmake/ament_cmake_export_dependencies-extras.cmake
+[21.841s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/armor_tracker/cmake/ament_cmake_export_include_directories-extras.cmake
+[21.842s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/armor_tracker/cmake/ament_cmake_export_libraries-extras.cmake
+[21.842s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/armor_tracker/cmake/armor_trackerConfig.cmake
+[21.842s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/armor_tracker/cmake/armor_trackerConfig-version.cmake
+[21.842s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/armor_tracker/package.xml
+[21.846s] Invoked command in '/home/dan/MA/CJ/build/armor_tracker' returned '0': AMENT_PREFIX_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/dan/MA/CJ/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/dan/MA/CJ/build/armor_tracker
