@@ -6,7 +6,7 @@
 
 # 目录：
 
-## 1. 串口模块
+## 1. rm_serial_driver package
 
 ### 代码架构
 
@@ -25,7 +25,7 @@ rm_serial_driver
 */
 ```
 
-## 代码解析：
+### 代码解析
 
 ```C++
 // 注：每次的代码解析都将从可执行的Node说起， 对应于该 rm_serial_driver package, 可执行的node 是src/ 下的rm_serial_driver.cpp文件
@@ -228,5 +228,199 @@ RMSerialDriver::RMSerialDriver(const rclcpp::NodeOptions & options)
     }
     
 ***************************************** 打开串口 end*******************************************
+```
+
+## 2. detector package
+
+### 代码架构
+
+```c++
+/**
+armor_detector
+	-- docs: 测试用图片
+	-- include： detector_node 以及其他工具类头文件
+		-- armor_detector
+			-- armor.hpp
+			-- detector_node.hpp
+			-- detector.hpp
+			-- number_classfier.hpp
+			-- pnp_sovler.hpp
+	-- model： 识别模型
+		-- label.txt： 多层感知机分类结果
+		-- mlp.onnx: 数字识别用模型
+	-- src： detector_node 以及其他工具类的实现
+		-- detector_node.cpp
+		-- detector.cpp
+		-- number_classfier.cpp
+		-- pnp_solver.cpp
+	-- test: 测试代码部分
+*/
+```
+
+
+
+### 代码解析
+
+```c++
+#include <cv_bridge/cv_bridge.h>
+#include <rmw/qos_profiles.h>
+#include <tf2/LinearMath/Matrix3x3.h>
+#include <tf2/convert.h>
+
+#include <ament_index_cpp/get_package_share_directory.hpp>
+#include <image_transport/image_transport.hpp>
+#include <opencv2/core.hpp>
+#include <opencv2/imgproc.hpp>
+#include <rclcpp/duration.hpp>
+#include <rclcpp/qos.hpp>
+#include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
+
+// STD
+#include <algorithm>
+#include <map>
+#include <memory>
+#include <string>
+#include <vector>
+
+#include "armor_detector/armor.hpp"
+#include "armor_detector/detector_node.hpp"
+
+namespace rm_auto_aim
+{
+ArmorDetectorNode::ArmorDetectorNode(const rclcpp::NodeOptions & options)
+: Node("armor_detector", options)
+{
+  RCLCPP_INFO(this->get_logger(), "Starting DetectorNode!");
+
+  // Detector
+  detector_ = initDetector();
+    
+********************************************initDetector() begin******************************************************
+std::unique_ptr<Detector> ArmorDetectorNode::initDetector()
+{
+    
+  // rcl_interfaces::msg::Parameterdescriptior 可以理解为自定义约束参数，有时候对安全性要求较高的时候是很有用的，
+  // 具体的使用文档请参考MA_vision_advanced.md, ROS 通用知识， rcl_interfaces部分简述了它的使用方法
+  rcl_interfaces::msg::ParameterDescriptor param_desc;
+  param_desc.integer_range.resize(1);
+  param_desc.integer_range[0].step = 1;
+  param_desc.integer_range[0].from_value = 0;
+  param_desc.integer_range[0].to_value = 255;
+  int binary_thres = declare_parameter("binary_thres", 160, param_desc); // 设定二值化阈值
+
+  param_desc.description = "0-RED, 1-BLUE";
+  param_desc.integer_range[0].from_value = 0;
+  param_desc.integer_range[0].to_value = 1;
+  auto detect_color = declare_parameter("detect_color", RED, param_desc);  // 设定检验颜色
+	
+    
+  // 这种声明方式： .your_var = value  在C++ 20被称作 designated initializer。
+    
+  // 设定灯条信息：
+  Detector::LightParams l_params = {
+    .min_ratio = declare_parameter("light.min_ratio", 0.1), // 最小比例
+    .max_ratio = declare_parameter("light.max_ratio", 0.4), // 最大比例
+    .max_angle = declare_parameter("light.max_angle", 40.0)}; // 最大偏角
+
+  // 设定装甲板信息：
+  Detector::ArmorParams a_params = { 
+    .min_light_ratio = declare_parameter("armor.min_light_ratio", 0.7), // 最小灯条比例
+    .min_small_center_distance = declare_parameter("armor.min_small_center_distance", 0.8), // 小装甲板：到中心最小距离
+    .max_small_center_distance = declare_parameter("armor.max_small_center_distance", 3.2), // 小装甲板：到中心最大距离
+    .min_large_center_distance = declare_parameter("armor.min_large_center_distance", 3.2), // 大装甲板：到中心最小距离
+    .max_large_center_distance = declare_parameter("armor.max_large_center_distance", 5.5), // 大装甲板：到中心最大距离
+    .max_angle = declare_parameter("armor.max_angle", 35.0)}; // 最大偏角
+
+  // 将上边的信息全部传到Detector类中，构建出一个对象。
+  auto detector = std::make_unique<Detector>(binary_thres, detect_color, l_params, a_params);
+  
+  // Init classifier
+  auto pkg_path = ament_index_cpp::get_package_share_directory("armor_detector");
+  auto model_path = pkg_path + "/model/mlp.onnx";
+  auto label_path = pkg_path + "/model/label.txt";
+  double threshold = this->declare_parameter("classifier_threshold", 0.7);
+  std::vector<std::string> ignore_classes =
+    this->declare_parameter("ignore_classes", std::vector<std::string>{"negative"});
+  detector->classifier =
+    std::make_unique<NumberClassifier>(model_path, label_path, threshold, ignore_classes);
+
+  return detector;
+}   
+    
+*******************************************initDetector() end*********************************************************
+
+  // Armors Publisher
+  armors_pub_ = this->create_publisher<auto_aim_interfaces::msg::Armors>(
+    "/detector/armors", rclcpp::SensorDataQoS());
+    
+    
+*******************************************Armors Publisher begin*****************************************************
+// QOS 相关部分文档请参考 MA_vision_advanced.m
+    
+*******************************************Armors Publisher end*******************************************************
+    
+    
+// Visualization Marker Publisher
+  armor_marker_.ns = "armors";
+  armor_marker_.action = visualization_msgs::msg::Marker::ADD;
+  armor_marker_.type = visualization_msgs::msg::Marker::CUBE;
+  armor_marker_.scale.x = 0.05;
+  armor_marker_.scale.z = 0.125;
+  armor_marker_.color.a = 1.0;
+  armor_marker_.color.g = 0.5;
+  armor_marker_.color.b = 1.0;
+  armor_marker_.lifetime = rclcpp::Duration::from_seconds(0.1);
+
+  text_marker_.ns = "classification";
+  text_marker_.action = visualization_msgs::msg::Marker::ADD;
+  text_marker_.type = visualization_msgs::msg::Marker::TEXT_VIEW_FACING;
+  text_marker_.scale.z = 0.1;
+  text_marker_.color.a = 1.0;
+  text_marker_.color.r = 1.0;
+  text_marker_.color.g = 1.0;
+  text_marker_.color.b = 1.0;
+  text_marker_.lifetime = rclcpp::Duration::from_seconds(0.1);
+    
+  marker_pub_ =
+    	this->create_publisher<visualization_msgs::msg::MarkerArray>("/detector/marker", 10);
+
+ *******************************************Visualization Marker Publisher begin*****************************************************
+ // ROS rviz visualization type 请参考 MA_vision_advanced.md 相关部分 
+ *******************************************Visualization Marker Publisher end*******************************************************
+     
+  // Debug Publishers
+  debug_ = this->declare_parameter("debug", false);
+  if (debug_) {
+    createDebugPublishers();
+  }
+    
+ *******************************************Debug Publishers begin*****************************************************
+// 在ros 中， 涉及 Image msg的传输最好就要与 image_transport 结合，相关原因及知识请参考 MA_vison_advanced.md 部分。
+void ArmorDetectorNode::createDebugPublishers()
+{
+  lights_data_pub_ =
+    this->create_publisher<auto_aim_interfaces::msg::DebugLights>("/detector/debug_lights", 10);
+  armors_data_pub_ =
+    this->create_publisher<auto_aim_interfaces::msg::DebugArmors>("/detector/debug_armors", 10);
+
+  binary_img_pub_ = image_transport::create_publisher(this, "/detector/binary_img");
+  number_img_pub_ = image_transport::create_publisher(this, "/detector/number_img");
+  result_img_pub_ = image_transport::create_publisher(this, "/detector/result_img");
+}
+ *******************************************Debug Publishers end  *****************************************************
+     
+ // Debug param change moniter
+  debug_param_sub_ = std::make_shared<rclcpp::ParameterEventHandler>(this);
+  debug_cb_handle_ =
+    debug_param_sub_->add_parameter_callback("debug", [this](const rclcpp::Parameter & p) {
+      debug_ = p.as_bool();
+      debug_ ? createDebugPublishers() : destroyDebugPublishers();
+    });
+    
+    
+*******************************************Debug param change moniter begin*****************************************************
+// rclcpp::ParameterEventHandler， ROS2 针对Paramter 的变化引入的一个新机制， 参考 MA_vision_advanced.md
+*******************************************Debug param change moniter end  *****************************************************
+
 ```
 
