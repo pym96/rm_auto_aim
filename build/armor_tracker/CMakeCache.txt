@@ -277,6 +277,9 @@ _lib:FILEPATH=/home/dan/MA/CJ/install/auto_aim_interfaces/lib/libauto_aim_interf
 //The directory containing a CMake configuration file for action_msgs.
 action_msgs_DIR:PATH=/opt/ros/humble/share/action_msgs/cmake
 
+//Path to a program.
+ament_clang_format_BIN:FILEPATH=/opt/ros/humble/bin/ament_clang_format
+
 //The directory containing a CMake configuration file for ament_cmake.
 ament_cmake_DIR:PATH=/opt/ros/humble/share/ament_cmake/cmake
 
@@ -284,7 +287,7 @@ ament_cmake_DIR:PATH=/opt/ros/humble/share/ament_cmake/cmake
 ament_cmake_auto_DIR:PATH=/opt/ros/humble/share/ament_cmake_auto/cmake
 
 //The directory containing a CMake configuration file for ament_cmake_clang_format.
-ament_cmake_clang_format_DIR:PATH=ament_cmake_clang_format_DIR-NOTFOUND
+ament_cmake_clang_format_DIR:PATH=/opt/ros/humble/share/ament_cmake_clang_format/cmake
 
 //The directory containing a CMake configuration file for ament_cmake_copyright.
 ament_cmake_copyright_DIR:PATH=/opt/ros/humble/share/ament_cmake_copyright/cmake
@@ -751,7 +754,7 @@ FIND_PACKAGE_MESSAGE_DETAILS_FastRTPS:INTERNAL=[/opt/ros/humble/include][/opt/ro
 //Details about finding OpenSSL
 FIND_PACKAGE_MESSAGE_DETAILS_OpenSSL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libcrypto.so][/usr/include][c ][v3.0.2()]
 //Details about finding Python3
-FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/usr/bin/python3.10][cfound components: Interpreter ][v3.10.6()]
+FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/usr/bin/python3.10][cfound components: Interpreter ][v3.10.12()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //ADVANCED property for variable: OPENSSL_CRYPTO_LIBRARY
@@ -802,7 +805,7 @@ _OPENSSL_openssl_VERSION:INTERNAL=
 //Path to a program.
 _Python3_EXECUTABLE:INTERNAL=/usr/bin/python3.10
 //Python3 Properties
-_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;10;6;64;;cpython-310-x86_64-linux-gnu;/usr/lib/python3.10;/usr/lib/python3.10;/usr/lib/python3/dist-packages;/usr/lib/python3/dist-packages
+_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;10;12;64;;cpython-310-x86_64-linux-gnu;/usr/lib/python3.10;/usr/lib/python3.10;/usr/lib/python3/dist-packages;/usr/lib/python3/dist-packages
 _Python3_INTERPRETER_SIGNATURE:INTERNAL=b91b4035ecb3bb3f5760d35922531bcd
 __pkg_config_arguments__OPENSSL:INTERNAL=QUIET;openssl
 __pkg_config_checked__OPENSSL:INTERNAL=1

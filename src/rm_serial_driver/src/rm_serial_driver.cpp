@@ -93,19 +93,25 @@ RMSerialDriver::~RMSerialDriver()
 void RMSerialDriver::receiveData()
 {
   std::vector<uint8_t> header(1);
+  
   std::vector<uint8_t> data;
+
   data.reserve(sizeof(ReceivePacket));
 
   while (rclcpp::ok()) {
     try {
       serial_driver_->port()->receive(header);
-
+      
       if (header[0] == 0x5A) {
+
         data.resize(sizeof(ReceivePacket) - 1);
         serial_driver_->port()->receive(data);
 
         data.insert(data.begin(), header[0]);
+        
         ReceivePacket packet = fromVector(data);
+
+        RCLCPP_INFO(this->get_logger(),"Current sizeof(packet) is: %ld",sizeof(packet));
 
         bool crc_ok =
           crc16::Verify_CRC16_Check_Sum(reinterpret_cast<const uint8_t *>(&packet), sizeof(packet));
@@ -113,7 +119,7 @@ void RMSerialDriver::receiveData()
           if (!initial_set_param_ || packet.detect_color != previous_receive_color_) {
             setParam(rclcpp::Parameter("detect_color", packet.detect_color));
             previous_receive_color_ = packet.detect_color;
-          }
+          } 
 
           if (packet.reset_tracker) {
             resetTracker();

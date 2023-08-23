@@ -27,9 +27,9 @@ Detector::Detector(
 
 std::vector<Armor> Detector::detect(const cv::Mat & input)
 {
-  binary_img = preprocessImage(input);
-  lights_ = findLights(input, binary_img);
-  armors_ = matchLights(lights_);
+  binary_img = preprocessImage(input);  // Binary the image
+  lights_ = findLights(input, binary_img); // Based on the binary image to find light
+  armors_ = matchLights(lights_); // Based on the found light above to find the armors
 
   if (!armors_.empty()) {
     classifier->extractNumbers(input, armors_);

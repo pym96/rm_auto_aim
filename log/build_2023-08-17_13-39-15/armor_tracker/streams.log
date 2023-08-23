@@ -1,0 +1,87 @@
+[0.035s] Invoking command in '/home/dan/MA/CJ/build/armor_tracker': CMAKE_PREFIX_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces:/home/dan/MA/CJ/install/rm_vision_bringup:/home/dan/MA/CJ/install/rm_serial_driver:/home/dan/MA/CJ/install/armor_tracker:/home/dan/MA/CJ/install/armor_detector:/home/dan/Downloads/livox_driver2/install/livox_ros_driver2:/opt/ros/humble LD_LIBRARY_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces/lib:/home/dan/MA/CJ/install/rm_serial_driver/lib:/home/dan/MA/CJ/install/armor_tracker/lib:/home/dan/MA/CJ/install/armor_detector/lib:/home/dan/Downloads/livox_driver2/install/livox_ros_driver2/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake /home/dan/MA/CJ/src/rm_auto_aim/armor_tracker -DCMAKE_INSTALL_PREFIX=/home/dan/MA/CJ/install/armor_tracker
+[0.121s] -- The C compiler identification is GNU 11.4.0
+[0.249s] -- The CXX compiler identification is GNU 11.4.0
+[0.258s] -- Detecting C compiler ABI info
+[0.325s] -- Detecting C compiler ABI info - done
+[0.331s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.331s] -- Detecting C compile features
+[0.331s] -- Detecting C compile features - done
+[0.334s] -- Detecting CXX compiler ABI info
+[0.408s] -- Detecting CXX compiler ABI info - done
+[0.417s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.417s] -- Detecting CXX compile features
+[0.418s] -- Detecting CXX compile features - done
+[0.421s] -- Found ament_cmake_auto: 1.3.5 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[0.669s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[0.874s] -- Found rosidl_generator_c: 3.1.4 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.879s] -- Found rosidl_adapter: 3.1.4 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.886s] -- Found rosidl_generator_cpp: 3.1.4 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.898s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.932s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.997s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.000s] -- Found rmw_fastrtps_cpp: 6.2.2 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.095s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.143s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.187s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.195s] -- Looking for pthread.h
+[1.279s] -- Looking for pthread.h - found
+[1.280s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.367s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.368s] -- Found Threads: TRUE  
+[1.870s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[1.871s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.871s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[2.199s] -- Found ament_lint_auto: 0.12.6 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.220s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.220s] -- Configured cppcheck include dirs: /home/dan/MA/CJ/src/rm_auto_aim/armor_tracker/include
+[2.220s] -- Configured cppcheck exclude dirs and/or files: 
+[2.221s] -- Added test 'lint_cmake' to check CMake code style
+[2.222s] -- Added test 'xmllint' to check XML markup files
+[2.223s] -- Added test 'clang_format' to check C / C++ code style
+[2.227s] -- Configuring done
+[2.245s] -- Generating done
+[2.247s] -- Build files have been written to: /home/dan/MA/CJ/build/armor_tracker
+[2.258s] Invoked command in '/home/dan/MA/CJ/build/armor_tracker' returned '0': CMAKE_PREFIX_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces:/home/dan/MA/CJ/install/rm_vision_bringup:/home/dan/MA/CJ/install/rm_serial_driver:/home/dan/MA/CJ/install/armor_tracker:/home/dan/MA/CJ/install/armor_detector:/home/dan/Downloads/livox_driver2/install/livox_ros_driver2:/opt/ros/humble LD_LIBRARY_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces/lib:/home/dan/MA/CJ/install/rm_serial_driver/lib:/home/dan/MA/CJ/install/armor_tracker/lib:/home/dan/MA/CJ/install/armor_detector/lib:/home/dan/Downloads/livox_driver2/install/livox_ros_driver2/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake /home/dan/MA/CJ/src/rm_auto_aim/armor_tracker -DCMAKE_INSTALL_PREFIX=/home/dan/MA/CJ/install/armor_tracker
+[2.260s] Invoking command in '/home/dan/MA/CJ/build/armor_tracker': CMAKE_PREFIX_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces:/home/dan/MA/CJ/install/rm_vision_bringup:/home/dan/MA/CJ/install/rm_serial_driver:/home/dan/MA/CJ/install/armor_tracker:/home/dan/MA/CJ/install/armor_detector:/home/dan/Downloads/livox_driver2/install/livox_ros_driver2:/opt/ros/humble LD_LIBRARY_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces/lib:/home/dan/MA/CJ/install/rm_serial_driver/lib:/home/dan/MA/CJ/install/armor_tracker/lib:/home/dan/MA/CJ/install/armor_detector/lib:/home/dan/Downloads/livox_driver2/install/livox_ros_driver2/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/dan/MA/CJ/build/armor_tracker -- -j16 -l16
+[2.306s] [ 16%] [32mBuilding CXX object CMakeFiles/armor_tracker_node.dir/rclcpp_components/node_main_armor_tracker_node.cpp.o[0m
+[2.309s] [ 66%] [32mBuilding CXX object CMakeFiles/armor_tracker.dir/src/tracker.cpp.o[0m
+[2.309s] [ 66%] [32mBuilding CXX object CMakeFiles/armor_tracker.dir/src/tracker_node.cpp.o[0m
+[2.309s] [ 66%] [32mBuilding CXX object CMakeFiles/armor_tracker.dir/src/extended_kalman_filter.cpp.o[0m
+[7.406s] [ 83%] [32m[1mLinking CXX executable armor_tracker_node[0m
+[7.636s] [ 83%] Built target armor_tracker_node
+[17.389s] [100%] [32m[1mLinking CXX shared library libarmor_tracker.so[0m
+[18.948s] [100%] Built target armor_tracker
+[18.958s] Invoked command in '/home/dan/MA/CJ/build/armor_tracker' returned '0': CMAKE_PREFIX_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces:/home/dan/MA/CJ/install/rm_vision_bringup:/home/dan/MA/CJ/install/rm_serial_driver:/home/dan/MA/CJ/install/armor_tracker:/home/dan/MA/CJ/install/armor_detector:/home/dan/Downloads/livox_driver2/install/livox_ros_driver2:/opt/ros/humble LD_LIBRARY_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces/lib:/home/dan/MA/CJ/install/rm_serial_driver/lib:/home/dan/MA/CJ/install/armor_tracker/lib:/home/dan/MA/CJ/install/armor_detector/lib:/home/dan/Downloads/livox_driver2/install/livox_ros_driver2/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/dan/MA/CJ/build/armor_tracker -- -j16 -l16
+[18.996s] Invoking command in '/home/dan/MA/CJ/build/armor_tracker': CMAKE_PREFIX_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces:/home/dan/MA/CJ/install/rm_vision_bringup:/home/dan/MA/CJ/install/rm_serial_driver:/home/dan/MA/CJ/install/armor_tracker:/home/dan/MA/CJ/install/armor_detector:/home/dan/Downloads/livox_driver2/install/livox_ros_driver2:/opt/ros/humble LD_LIBRARY_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces/lib:/home/dan/MA/CJ/install/rm_serial_driver/lib:/home/dan/MA/CJ/install/armor_tracker/lib:/home/dan/MA/CJ/install/armor_detector/lib:/home/dan/Downloads/livox_driver2/install/livox_ros_driver2/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/dan/MA/CJ/build/armor_tracker
+[19.004s] -- Install configuration: ""
+[19.005s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/lib/armor_tracker/armor_tracker_node
+[19.005s] -- Set runtime path of "/home/dan/MA/CJ/install/armor_tracker/lib/armor_tracker/armor_tracker_node" to ""
+[19.005s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/include
+[19.006s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/include/armor_tracker
+[19.006s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/include/armor_tracker/tracker_node.hpp
+[19.006s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/include/armor_tracker/tracker.hpp
+[19.006s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/include/armor_tracker/extended_kalman_filter.hpp
+[19.006s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/armor_tracker/environment/library_path.sh
+[19.006s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/armor_tracker/environment/library_path.dsv
+[19.006s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/lib/libarmor_tracker.so
+[19.018s] -- Set runtime path of "/home/dan/MA/CJ/install/armor_tracker/lib/libarmor_tracker.so" to ""
+[19.018s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/ament_index/resource_index/package_run_dependencies/armor_tracker
+[19.018s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/ament_index/resource_index/parent_prefix_path/armor_tracker
+[19.019s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/armor_tracker/environment/ament_prefix_path.sh
+[19.019s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/armor_tracker/environment/ament_prefix_path.dsv
+[19.019s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/armor_tracker/environment/path.sh
+[19.019s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/armor_tracker/environment/path.dsv
+[19.019s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/armor_tracker/local_setup.bash
+[19.019s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/armor_tracker/local_setup.sh
+[19.019s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/armor_tracker/local_setup.zsh
+[19.019s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/armor_tracker/local_setup.dsv
+[19.019s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/armor_tracker/package.dsv
+[19.020s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/ament_index/resource_index/packages/armor_tracker
+[19.020s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/ament_index/resource_index/rclcpp_components/armor_tracker
+[19.020s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/armor_tracker/cmake/ament_cmake_export_dependencies-extras.cmake
+[19.020s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/armor_tracker/cmake/ament_cmake_export_include_directories-extras.cmake
+[19.020s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/armor_tracker/cmake/ament_cmake_export_libraries-extras.cmake
+[19.020s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/armor_tracker/cmake/armor_trackerConfig.cmake
+[19.020s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/armor_tracker/cmake/armor_trackerConfig-version.cmake
+[19.020s] -- Installing: /home/dan/MA/CJ/install/armor_tracker/share/armor_tracker/package.xml
+[19.024s] Invoked command in '/home/dan/MA/CJ/build/armor_tracker' returned '0': CMAKE_PREFIX_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces:/home/dan/MA/CJ/install/rm_vision_bringup:/home/dan/MA/CJ/install/rm_serial_driver:/home/dan/MA/CJ/install/armor_tracker:/home/dan/MA/CJ/install/armor_detector:/home/dan/Downloads/livox_driver2/install/livox_ros_driver2:/opt/ros/humble LD_LIBRARY_PATH=/home/dan/MA/CJ/install/auto_aim_interfaces/lib:/home/dan/MA/CJ/install/rm_serial_driver/lib:/home/dan/MA/CJ/install/armor_tracker/lib:/home/dan/MA/CJ/install/armor_detector/lib:/home/dan/Downloads/livox_driver2/install/livox_ros_driver2/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/dan/MA/CJ/build/armor_tracker

@@ -67,6 +67,7 @@ uint32_t Verify_CRC16_Check_Sum(const uint8_t * pchMessage, uint32_t dwLength)
   if ((pchMessage == nullptr) || (dwLength <= 2)) return false;
 
   w_expected = Get_CRC16_Check_Sum(pchMessage, dwLength - 2, CRC16_INIT);
+
   return (
     (w_expected & 0xff) == pchMessage[dwLength - 2] &&
     ((w_expected >> 8) & 0xff) == pchMessage[dwLength - 1]);

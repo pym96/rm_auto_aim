@@ -51,6 +51,7 @@ ArmorTrackerNode::ArmorTrackerNode(const rclcpp::NodeOptions & options)
     // clang-format on
     return f;
   };
+
   // h - Observation function
   auto h = [](const Eigen::VectorXd & x) {
     Eigen::VectorXd z(4);
@@ -61,6 +62,7 @@ ArmorTrackerNode::ArmorTrackerNode(const rclcpp::NodeOptions & options)
     z(3) = x(6);               // yaw
     return z;
   };
+  
   // J_h - Jacobian of observation function
   auto j_h = [](const Eigen::VectorXd & x) {
     Eigen::MatrixXd h(4, 9);

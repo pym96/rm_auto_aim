@@ -238,7 +238,7 @@ std::vector<Armor> ArmorDetectorNode::detectArmors(
     }
 
     detector_->drawResults(img);
-    // Draw camera center
+    // Draw camera center in the raw_image window
     cv::circle(img, cam_center_, 5, cv::Scalar(255, 0, 0), 2);
     // Draw latency
     std::stringstream latency_ss;
