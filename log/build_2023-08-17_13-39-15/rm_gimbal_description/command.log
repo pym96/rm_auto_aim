@@ -1,6 +1,0 @@
-Invoking command in '/home/dan/MA/CJ/build/rm_gimbal_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/dan/MA/CJ/src/rm_gimbal_description -DCMAKE_INSTALL_PREFIX=/home/dan/MA/CJ/install/rm_gimbal_description
-Invoked command in '/home/dan/MA/CJ/build/rm_gimbal_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/dan/MA/CJ/src/rm_gimbal_description -DCMAKE_INSTALL_PREFIX=/home/dan/MA/CJ/install/rm_gimbal_description
-Invoking command in '/home/dan/MA/CJ/build/rm_gimbal_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/dan/MA/CJ/build/rm_gimbal_description -- -j16 -l16
-Invoked command in '/home/dan/MA/CJ/build/rm_gimbal_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/dan/MA/CJ/build/rm_gimbal_description -- -j16 -l16
-Invoking command in '/home/dan/MA/CJ/build/rm_gimbal_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/dan/MA/CJ/build/rm_gimbal_description
-Invoked command in '/home/dan/MA/CJ/build/rm_gimbal_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/dan/MA/CJ/build/rm_gimbal_description
